@@ -1,0 +1,367 @@
+{
+    "navbar": {
+        "home": "Home",
+        "packages": "Packages",
+        "about": "About",
+        "documents": "Documents",
+        "gallery": "Gallery",
+        "contacts": "Contacts",
+        "book_now": "Pick a tour",
+        "slogan": "Roof of the World"
+    },
+    "footer": {
+        "desc": "Leading premium expeditions to the roof of the world. We specialize in safe, high-end trekking and mountaineering experiences across Central Asia.",
+        "quick_links": "Quick Links",
+        "newsletter": "Newsletter",
+        "newsletter_desc": "Join our elite circle for updates on new routes.",
+        "email_placeholder": "Email address",
+        "subscribe": "Subscribe",
+        "rights_reserved": "© 2024 Pamir Peaks Expeditions. All Rights Reserved.",
+        "privacy": "Privacy",
+        "terms": "Terms",
+        "cookies": "Cookies",
+        "safety": "Safety Protocols",
+        "expeditions": "Expeditions"
+    },
+    "documents": {
+        "title": "Documents",
+        "legal_info": "Legal & Info",
+        "view": "View",
+        "license": "Tourism Operator License",
+        "agreement": "Public Offer Agreement",
+        "privacy": "Privacy Policy",
+        "safety": "Safety Certifications",
+        "type_pdf": "PDF",
+        "close": "Close"
+    },
+    "home": {
+        "hero_tag": "Peak Performance & Luxury",
+        "hero_title": "Conquer the",
+        "hero_subtitle": "Roof of the World",
+        "hero_desc": "Experience the raw majesty of the Pamir Mountains with our bespoke, premium expeditions tailored for the truly adventurous.",
+        "explore_map": "Explore Map",
+        "view_packages": "View Packages",
+        "landing": {
+            "hero_headline": "Your next ascent starts here",
+            "hero_sub": "Exclusive expeditions and premium getaways at the planet's most breathtaking places.",
+            "mode_tours": "Tours with flights",
+            "mode_hotels": "Hotels",
+            "from_label": "From",
+            "from_ph": "Bishkek",
+            "to_label": "To",
+            "to_ph": "Turkey, Kemer",
+            "dates_label": "Dates",
+            "dates_ph": "Oct 12 — Oct 24",
+            "guests_label": "Guests",
+            "guests_ph": "2 adults, 1 child",
+            "find_cta": "Find tours",
+            "filter_stars": "Hotel class",
+            "filter_meals": "Board basis",
+            "meal_ai": "All inclusive (AI)",
+            "meal_ultra": "Ultra all inclusive",
+            "meal_bb": "Breakfast only",
+            "filter_rating": "Guest rating",
+            "rating_plus": "4.5+",
+            "adv_filters": "Advanced filters",
+            "dest_kicker": "2024 destinations",
+            "dest_title": "Popular destinations",
+            "dest_view_all": "View all",
+            "news_title": "Be the first to hear about new routes",
+            "news_desc": "Subscribe to our private expedition list for secret tours and special offers.",
+            "news_placeholder": "Your e-mail",
+            "news_cta": "Subscribe",
+            "cards": [
+                {
+                    "badge": "Hot destination",
+                    "title": "Turkey, Kemer",
+                    "desc": "Turquoise waters and premium service at the foot of the Taurus.",
+                    "price": "from 125,000 som"
+                },
+                {
+                    "badge": "Expedition",
+                    "title": "UAE, Dubai",
+                    "desc": "The pinnacle of modern luxury and architectural spectacle.",
+                    "price": "from 142,000 som"
+                },
+                {
+                    "badge": "Exclusive",
+                    "title": "Maldives",
+                    "desc": "A secluded paradise in the heart of the Indian Ocean.",
+                    "price": "from 280,000 som"
+                },
+                {
+                    "badge": "Culture",
+                    "title": "Japan, Kyoto",
+                    "desc": "Immersion in contemplative culture and ancient traditions.",
+                    "price": "from 310,000 som"
+                }
+            ]
+        }
+    },
+    "about": {
+        "title": "About Us",
+        "heading": "Our Mission & ",
+        "heading_highlight": "Legacy",
+        "p1": "Founded in the rugged heart of the Pamirs, Pamir Peaks is more than a travel agency; we are the custodians of high-altitude heritage. Our mission is to open the \"Roof of the World\" to the most discerning adventurers while preserving its pristine nature and ancient cultures.",
+        "p2": "We specialize in bespoke expeditions, cultural immersions, and extreme alpinism. Our team consists of local experts, certified guides, and logistics masters who know every peak and valley of Tajikistan and Central Asia.",
+        "why_choose_us": "Why Choose Us?",
+        "reasons": [
+            "100% Local Expertise with Global Standards",
+            "Sustainable & Eco-friendly Practices",
+            "Exclusive Access to Remote Regions",
+            "24/7 Support & Satellite Communication"
+        ],
+        "team_title": "Our Team",
+        "team_member_prefix": "Team Member",
+        "role": "Senior Guide"
+    },
+    "packages": {
+        "select_journey": "Select Your Journey",
+        "title": "Expedition Packages",
+        "filter_by": "Filter By:",
+        "filters": [
+            "All",
+            "Trekking",
+            "Alpinism",
+            "Cultural",
+            "Jeep Tour"
+        ],
+        "starting_from": "Starting From",
+        "view_details": "View Details",
+        "wa_title": "Wakhan Valley Expedition",
+        "wa_level": "Challenging",
+        "wa_duration": "14 Days",
+        "pl_title": "Peak Lenin Summit",
+        "pl_level": "Expert",
+        "pl_duration": "21 Days",
+        "fm_title": "Fann Mountains Trek",
+        "fm_level": "Moderate",
+        "fm_duration": "10 Days"
+    },
+    "destinations": {
+        "title": "Central Asia ",
+        "title_highlight": "& The Pamir Knot",
+        "subtitle": "Interactive Cartography",
+        "desc": "Explore the converging mountain ranges of the Himalayas, Karakoram, Hindu Kush, and Tian Shan. Select a zone to analyze terrain data.",
+        "region_guide": "Region Guide",
+        "sub_region": "Tajikistan & Afghanistan",
+        "filter_placeholder": "Filter by region or peak...",
+        "stats": {
+            "elevation": "Peak Elevation",
+            "flow": "Glacial Flow",
+            "avg_temp": "Avg Temp",
+            "best_season": "Best Season",
+            "explore_expedition": "Explore Expedition",
+            "speak_specialist": "Speak to a Specialist",
+            "years_exp": "Years Experience",
+            "safety_rec": "Safety Record",
+            "meters_peaked": "Meters Peaked",
+            "local_guides": "Local Guides"
+        },
+        "regions": {
+            "Wakhan": {
+                "name": "The Wakhan Corridor",
+                "terrain": "River Valley",
+                "desc": "A narrow finger of land that separates the Tajikistan Pamir from Pakistan and the Hindu Kush, forming one of the most remote and culturally rich corridors on Earth.",
+                "tag": "Most Popular"
+            },
+            "Fann": {
+                "name": "Fann Mountains",
+                "terrain": "Granite Spires",
+                "desc": "The \"Alps of Tajikistan.\" Famed for its turquoise Seven Lakes and rugged turquoise peaks, it offers the highest density of 5,000m+ climbs in the region.",
+                "tag": "Trekking Focus"
+            },
+            "GBAO": {
+                "name": "GBAO Highlands",
+                "terrain": "High Plateau",
+                "desc": "The true \"Roof of the World.\" A massive high-altitude plateau where nomadic Kyrgyz live alongside the Pamir Highway, under the shadow of Peak Lenin.",
+                "tag": "High Plateau"
+            },
+            "TianShan": {
+                "name": "Tian Shan Range",
+                "terrain": "Glacial Giants",
+                "desc": "Stretching into Kyrgyzstan, the \"Celestial Mountains\" host Jengish Chokusu and vast, lush alpine pastures accessible only by expedition.",
+                "tag": "Extreme Altitude"
+            }
+        }
+    },
+    "gallery": {
+        "visual_archive": "Visual Archive",
+        "title": "Gallery",
+        "visual_journey": "A Visual Journey",
+        "description": "Where the earth meets the heavens in a silent dialogue of stone and snow. Our archive captures the raw, technical precision of high-altitude navigation.",
+        "tap_to_open": "Tap to open full-resolution view.",
+        "show_less": "SHOW LESS",
+        "access_full_archive": "ACCESS FULL ARCHIVE",
+        "categories": [
+            "All",
+            "Expeditions",
+            "Landscapes",
+            "Culture",
+            "Alpinism"
+        ]
+    },
+    "safety": {
+        "tag": "Zero Compromise Security",
+        "title": "Safety & Logistics Standards",
+        "desc": "In the remote reaches of the Pamirs, preparation is everything. Our multi-layered safety protocols ensure you can focus on the journey while we manage the risks.",
+        "standards": [
+            "Global Rescue Intl.",
+            "Iridium Network",
+            "Pamir Air Evac",
+            "IFMGA Certified"
+        ],
+        "sections": {
+            "medical": {
+                "title": "Medical Support",
+                "items": [
+                    {
+                        "name": "High-Altitude Medics",
+                        "desc": "WFR-certified specialists trained specifically for hypoxia and pulmonary edema."
+                    },
+                    {
+                        "name": "Portable Gamow Bags",
+                        "desc": "Hyperbaric chambers available at every high-altitude camp above 4,000m."
+                    },
+                    {
+                        "name": "24/7 Tele-medicine",
+                        "desc": "Direct satellite link to trauma specialists in Europe and North America."
+                    }
+                ]
+            },
+            "comms": {
+                "title": "Comms & Tech",
+                "items": [
+                    {
+                        "name": "Iridium Satellite Gear",
+                        "desc": "Redundant communication systems including Garmin InReach and sat-phones."
+                    },
+                    {
+                        "name": "Live GPS Tracking",
+                        "desc": "Family members can track your expedition's real-time progress online."
+                    },
+                    {
+                        "name": "Meteorological Intel",
+                        "desc": "Twice-daily bespoke weather forecasts from specialized mountain meteorologists."
+                    }
+                ]
+            },
+            "evac": {
+                "title": "Emergency Evac",
+                "items": [
+                    {
+                        "name": "Helicopter Priority",
+                        "desc": "Guaranteed response from local military and private rescue fleets."
+                    },
+                    {
+                        "name": "Oxygen Reserves",
+                        "desc": "Supplementary oxygen available for emergency descent and summit pushes."
+                    },
+                    {
+                        "name": "Protocol Redundancy",
+                        "desc": "Every lead guide carries triple redundancy for all emergency contacts."
+                    }
+                ]
+            }
+        },
+        "premium_basecamp": "The Premium Basecamp",
+        "basecamp_desc": "Recovery is as critical as the ascent. Our luxury basecamps are engineered for maximum comfort in extreme environments, featuring traditional Pamiri yurt architecture with modern western comforts.",
+        "features": [
+            "Multi-layer thermal insulation",
+            "Private sleeping quarters for single occupancy",
+            "Full solar-powered charging stations"
+        ],
+        "hotspots": {
+            "dining": {
+                "title": "Gourmet Dining",
+                "desc": "Full-time expedition chefs preparing fresh local and international cuisine."
+            },
+            "heating": {
+                "title": "Heated Flooring",
+                "desc": "Advanced underfloor heating systems maintain a steady 20°C even in sub-zero exterior temperatures."
+            },
+            "medical": {
+                "title": "Medical Bay",
+                "desc": "On-site medical equipment including oxygen concentrators and vital monitors."
+            }
+        },
+        "interactive_preview": "Interactive 3D Preview",
+        "hover_instruction": "Hover over points to explore the interior amenities.",
+        "pamir_peaks_standard": "The Pamir Peaks Standard",
+        "standards_list": [
+            {
+                "title": "Unmatched Safety",
+                "desc": "Satellite communication, oxygen supports, and highly trained medical responders accompany every high-altitude trek."
+            },
+            {
+                "title": "Luxury Logistics",
+                "desc": "From heated basecamp tents to private chefs, we redefine what 'remote travel' means through premium service."
+            },
+            {
+                "title": "Indigenous Wisdom",
+                "desc": "Our guides are locals whose families have lived in the Pamirs for centuries, offering authentic cultural depth."
+            }
+        ]
+    },
+    "inquiry": {
+        "concierge": "Concierge Service",
+        "title": "Expedition Inquiry",
+        "desc": "Your journey to the Roof of the World begins with a conversation. Share your aspirations, and let our specialists craft your elite mountain experience.",
+        "steps": {
+            "profile": "Profile",
+            "adventure": "Adventure",
+            "logistics": "Logistics"
+        },
+        "form": {
+            "full_name": "Full Name",
+            "email": "Email Address",
+            "style": "Preferred Expedition Style",
+            "styles": [
+                "Peak Ascent",
+                "Cultural Trek",
+                "Photo Odyssey"
+            ],
+            "message": "Message to your Consultant",
+            "message_placeholder": "Tell us about your previous mountaineering experience...",
+            "save_later": "Save for Later",
+            "back": "Back",
+            "next": "Next Phase",
+            "submit": "Confirm & Submit",
+            "ready": "Ready for submission",
+            "ready_desc": "We'll review your details and connect you with Marcus Thorne or another senior specialist within 24 hours."
+        },
+        "consultant": {
+            "role": "Senior Expedition Consultant",
+            "quote": "\"I've spent 12 seasons in the High Pamirs. My role is to ensure your expedition is as safe as it is spectacular.\"",
+            "book_call": "Book a Strategy Call",
+            "send_dm": "Send Direct Message"
+        },
+        "faq": {
+            "title": "Common Enquiries",
+            "items": [
+                {
+                    "q": "What is the best time of year for a Peak Lenin ascent?",
+                    "a": "The optimal window for high-altitude peaks in the Pamirs is from early July to late August. This period offers the most stable weather patterns and manageable snow conditions on the upper slopes."
+                },
+                {
+                    "q": "Do you provide high-altitude oxygen support?",
+                    "a": "Yes, we provide medical-grade oxygen support systems for all peak ascents above 6,000m, including portable cylinders and masks."
+                },
+                {
+                    "q": "Can I customize the trekking itinerary for photography?",
+                    "a": "Absolutely. Our bespoke service allows for 'Golden Hour' focused routes and extended stays in particularly photogenic locations like the Seven Lakes."
+                },
+                {
+                    "q": "What is your medical evacuation protocol?",
+                    "a": "We have priority contracts with both military and private helicopter fleets for 24-hour response across Gorno-Badakhshan."
+                }
+            ]
+        },
+        "testimonials": {
+            "title": "Voices from the Summit",
+            "quote": "\"The level of care and expertise was astounding. I never thought I'd see the sun rise over the Karakoram range in such comfort. Truly a life-changing expedition.\"",
+            "author": "Elena Rodriguez",
+            "role": "Global Trekker"
+        }
+    }
+}

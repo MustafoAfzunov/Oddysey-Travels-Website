@@ -1,0 +1,202 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-background: 248 249 250;
+    --color-surface: 248 249 250;
+    --color-on-background: 25 28 29;
+    --color-on-surface: 25 28 29;
+    --color-on-surface-variant: 64 73 68;
+    --color-surface-container-lowest: 255 255 255;
+    --color-surface-container-low: 243 244 245;
+    --color-surface-container: 237 238 239;
+    --color-surface-container-high: 231 232 233;
+    --color-surface-container-highest: 225 227 228;
+    --color-surface-variant: 225 227 228;
+    --color-outline-variant: 191 201 195;
+    --color-primary: 0 53 39;
+    --color-on-primary: 255 255 255;
+    --color-primary-container: 6 78 59;
+    --color-on-primary-container: 128 190 166;
+    --color-tertiary: 0 54 35;
+  }
+
+  html.dark {
+    --color-background: 14 21 17;
+    --color-surface: 14 21 17;
+    --color-on-background: 221 228 221;
+    --color-on-surface: 221 228 221;
+    --color-on-surface-variant: 187 202 191;
+    --color-surface-container-lowest: 9 16 12;
+    --color-surface-container-low: 22 29 25;
+    --color-surface-container: 26 33 29;
+    --color-surface-container-high: 36 44 39;
+    --color-surface-container-highest: 47 54 50;
+    --color-surface-variant: 47 54 50;
+    --color-outline-variant: 60 74 66;
+    --color-primary: 78 222 163;
+    --color-on-primary: 0 56 36;
+    --color-primary-container: 16 185 129;
+    --color-on-primary-container: 0 66 43;
+    --color-tertiary: 255 179 175;
+  }
+
+  html {
+    overflow-y: scroll;
+  }
+
+  body {
+    @apply font-sans transition-colors duration-300;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans tracking-tight;
+  }
+
+  p, span, label, input, textarea, select, button, a, li {
+    @apply font-sans;
+  }
+}
+
+@layer components {
+  .glass-nav {
+    @apply bg-white/70 backdrop-blur-xl dark:bg-forest-deep/70 border-b border-forest-deep/10 dark:border-white/10;
+  }
+
+  .glass-panel {
+    @apply bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-black/10 dark:border-white/10;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(180deg, rgba(19, 42, 19, 0.4) 0%, rgba(19, 42, 19, 0.7) 100%);
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .tilt-card {
+    transition: transform 0.3s ease-out;
+    transform-style: preserve-3d;
+  }
+
+  .tilt-card:hover {
+    transform: rotateX(5deg) rotateY(5deg);
+  }
+
+  .tilt-card-3d {
+    transform: rotateY(-10deg) rotateX(5deg);
+    box-shadow: 20px 20px 60px rgba(19, 42, 19, 0.4);
+    transition: transform 0.5s ease;
+  }
+
+  .tilt-card-3d:hover {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+
+  .topo-bg {
+    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDiDyg0xU0rCi0fCP4PZfui1pmqypgMRMhS8LzzHHJ0xTIgmlGP59JmSpyYo6k48NEmJC8mxu0p5d3NSAdJGMkRz-EXFkHM3P6apU0bBGECMZ-m0NJKpM4o6zz84BpAtWvol-InlYytwtWlC12-gc_PMGkU-LuEc-Yp1wJelj49GlvMujRfka1h-M1fEdAZM6JvDjsRy5-yMrHkQ5sTc2NctLoeLxfBuC40MlxZ_FZKE2Qqi_xh7eO5BZh2RfeVyVC6AYMombl8XJkr');
+    background-size: 800px;
+    opacity: 0.08;
+    pointer-events: none;
+  }
+
+  .dark .topo-bg {
+    opacity: 0.12;
+    filter: invert(1);
+  }
+
+  .topographic-bg {
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10 Q 30 10 30 30 T 50 50 T 70 30 T 90 10' fill='none' stroke='rgba(0, 53, 39, 0.05)' stroke-width='0.5'/%3E%3C/svg%3E");
+  }
+
+  .topo-grid {
+    background-image: radial-gradient(rgba(0, 53, 39, 0.08) 1px, transparent 0);
+    background-size: 24px 24px;
+  }
+
+  .dark .topo-grid {
+    background-image: radial-gradient(rgba(78, 222, 163, 0.1) 1px, transparent 0);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-primary/30 rounded-full hover:bg-primary/50 transition-colors;
+  }
+
+  .globe-container {
+    perspective: 2000px;
+  }
+
+  .rotating-map {
+    transform-style: preserve-3d;
+    animation: float 10s ease-in-out infinite;
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0px) rotateX(5deg);
+    }
+
+    50% {
+      transform: translateY(-20px) rotateX(-5deg);
+    }
+  }
+
+  .sphere-shadow {
+    box-shadow: inset -50px -50px 100px rgba(19, 42, 19, 0.1), 0 0 40px rgba(16, 185, 129, 0.1);
+  }
+
+  .dark .sphere-shadow {
+    box-shadow: inset -50px -50px 100px rgba(6, 13, 6, 0.5), 0 0 60px rgba(16, 185, 129, 0.05);
+  }
+
+  .emerald-gradient-btn {
+    @apply bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-forest-deep font-bold transition-all duration-300 shadow-lg shadow-emerald-500/20 active:scale-95;
+  }
+
+  .yurt-hotspot {
+    @apply absolute w-6 h-6 bg-primary rounded-full flex items-center justify-center cursor-pointer;
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.3);
+  }
+
+  .yurt-callout {
+    @apply absolute hidden group-hover/hotspot:block bg-white dark:bg-forest-deep p-3 rounded-lg shadow-xl border border-primary/20 w-48 z-30 text-xs bottom-full mb-3 left-1/2 -translate-x-1/2;
+  }
+
+  .grid-check-item {
+    @apply flex items-start gap-4 p-6 bg-white dark:bg-forest-deep rounded-xl border border-forest-deep/10 dark:border-white/10;
+  }
+
+  .topo-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10 Q 20 5 30 15 T 50 10 T 70 20 T 90 10' fill='none' stroke='%2310b981' stroke-opacity='0.1'/%3E%3Cpath d='M0 40 Q 15 35 30 45 T 60 40 T 90 50' fill='none' stroke='%2310b981' stroke-opacity='0.05'/%3E%3C/svg%3E");
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  }
+
+  .carto-grid {
+    background-image: linear-gradient(rgba(16, 185, 129, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(16, 185, 129, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .glass-panel-home {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(16, 185, 129, 0.1);
+  }
+}
