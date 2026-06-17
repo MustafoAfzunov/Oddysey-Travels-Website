@@ -16,11 +16,11 @@
     --color-surface-container-highest: 225 227 228;
     --color-surface-variant: 225 227 228;
     --color-outline-variant: 191 201 195;
-    --color-primary: 0 53 39;
+    --color-primary: 16 185 129;
     --color-on-primary: 255 255 255;
-    --color-primary-container: 6 78 59;
-    --color-on-primary-container: 128 190 166;
-    --color-tertiary: 0 54 35;
+    --color-primary-container: 52 211 153;
+    --color-on-primary-container: 6 78 59;
+    --color-tertiary: 5 150 105;
   }
 
   html.dark {
@@ -63,7 +63,7 @@
 
 @layer components {
   .glass-nav {
-    @apply bg-white/70 backdrop-blur-xl dark:bg-forest-deep/70 border-b border-forest-deep/10 dark:border-white/10;
+    @apply bg-white border-b border-forest-deep/10;
   }
 
   .glass-panel {

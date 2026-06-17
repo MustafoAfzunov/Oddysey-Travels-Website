@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-const Navbar = ({ theme = 'dark', onToggleTheme }) => {
+const Navbar = () => {
     const location = useLocation();
     const { t, i18n } = useTranslation();
     const [isVisible, setIsVisible] = React.useState(true);
@@ -42,7 +42,7 @@ const Navbar = ({ theme = 'dark', onToggleTheme }) => {
     return (
         <nav className={`fixed top-0 left-0 right-0 z-50 ${navShell} transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
             <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-                <Link to="/" className="flex items-center gap-3 group">
+                <Link to="/" className="flex items-center gap-3 group shrink-0">
                     <div className="relative w-20 h-20 flex items-center justify-center">
                         <img
                             src="/logo-nav.png"
@@ -60,7 +60,7 @@ const Navbar = ({ theme = 'dark', onToggleTheme }) => {
                     </div>
                 </Link>
 
-                <div className="hidden lg:flex items-center gap-8 ml-4 xl:ml-1 mr-auto">
+                <div className="hidden lg:flex items-center gap-8 ml-10 lg:ml-14 xl:ml-16 mr-auto">
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
@@ -77,22 +77,8 @@ const Navbar = ({ theme = 'dark', onToggleTheme }) => {
                 </div>
 
                 <div className="flex items-center gap-4 ml-6">
-                    <button
-                        type="button"
-                        onClick={onToggleTheme}
-                        className="hidden sm:flex items-center gap-2 px-3 py-2 rounded-lg bg-white/10 hover:bg-primary/10 text-forest-deep dark:text-white transition-colors"
-                        title="Toggle theme"
-                    >
-                        <span className="material-symbols-outlined text-sm">
-                            {theme === 'dark' ? 'light_mode' : 'dark_mode'}
-                        </span>
-                        <span className="text-[10px] font-bold uppercase tracking-widest">
-                            {theme === 'dark' ? 'Day' : 'Night'}
-                        </span>
-                    </button>
-
-                    <div className="hidden sm:flex rounded-lg p-1 bg-white/10">
-                        {['ru', 'tj', 'en'].map((l) => (
+                    <div className="hidden sm:flex rounded-lg p-1 bg-gray-100">
+                        {['ru', 'en'].map((l) => (
                             <button
                                 key={l}
                                 type="button"

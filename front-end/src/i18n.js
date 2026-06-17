@@ -4,7 +4,6 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
 import en from './locales/en.json';
 import ru from './locales/ru.json';
-import tj from './locales/tj.json';
 
 i18n
     .use(LanguageDetector)
@@ -13,8 +12,8 @@ i18n
         resources: {
             en: { translation: en },
             ru: { translation: ru },
-            tj: { translation: tj }
         },
+        supportedLngs: ['en', 'ru'],
         fallbackLng: 'en',
         interpolation: {
             escapeValue: false // react already safes from xss

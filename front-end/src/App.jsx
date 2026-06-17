@@ -25,7 +25,6 @@ const ScrollToTop = () => {
 
 function AppShell() {
     const { t } = useTranslation();
-    const [theme, setTheme] = React.useState('dark');
     const location = useLocation();
     const params = new URLSearchParams(location.search);
     const packageName = params.get('package') || 'tour package';
@@ -33,24 +32,16 @@ function AppShell() {
     const chatText = encodeURIComponent(`Здравствуйте! Интересует пакет ${packageName} на дату ${date}.`);
 
     useEffect(() => {
-        const storedTheme = localStorage.getItem('theme');
-        const initialTheme = storedTheme || 'dark';
-        setTheme(initialTheme);
-        document.documentElement.classList.toggle('dark', initialTheme === 'dark');
+        // Force light mode by ensuring dark class is never present.
+        document.documentElement.classList.remove('dark');
+        localStorage.removeItem('theme');
     }, []);
-
-    const toggleTheme = () => {
-        const nextTheme = theme === 'dark' ? 'light' : 'dark';
-        setTheme(nextTheme);
-        localStorage.setItem('theme', nextTheme);
-        document.documentElement.classList.toggle('dark', nextTheme === 'dark');
-    };
 
     return (
         <>
             <ScrollToTop />
             <div className="min-h-screen flex flex-col font-sans">
-                <Navbar theme={theme} onToggleTheme={toggleTheme} />
+                <Navbar />
                 <main className="flex-grow">
                     <Routes>
                         <Route

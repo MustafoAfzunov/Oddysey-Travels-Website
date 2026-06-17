@@ -3,6 +3,15 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { TOURS, localizeTour } from '../data/tours';
 
+const SORT_OPTIONS = [
+    'popularity',
+    'price-asc',
+    'price-desc',
+    'duration-asc',
+    'duration-desc',
+    'name',
+];
+
 const Packages = () => {
     const { t, i18n } = useTranslation();
 
@@ -11,6 +20,13 @@ const Packages = () => {
     const [maxDays, setMaxDays] = useState(21);
     const [minPrice, setMinPrice] = useState(500);
     const [maxPrice, setMaxPrice] = useState(8000);
+    const [sortBy, setSortBy] = useState('popularity');
+
+    const tourOrder = useMemo(() => {
+        const map = new Map();
+        TOURS.forEach((tour, index) => map.set(tour.slug, index));
+        return map;
+    }, []);
 
     const levels = useMemo(() => [...new Set(packages.map((pkg) => pkg.level))], [packages]);
 
@@ -33,6 +49,35 @@ const Packages = () => {
             }),
         [packages, selectedLevels, maxDays, minPrice, maxPrice]
     );
+
+    const sortedPackages = useMemo(() => {
+        const sorted = [...filteredPackages];
+
+        switch (sortBy) {
+            case 'price-asc':
+                return sorted.sort((a, b) => parsePrice(a.price) - parsePrice(b.price));
+            case 'price-desc':
+                return sorted.sort((a, b) => parsePrice(b.price) - parsePrice(a.price));
+            case 'duration-asc':
+                return sorted.sort((a, b) => parseDays(a.duration) - parseDays(b.duration));
+            case 'duration-desc':
+                return sorted.sort((a, b) => parseDays(b.duration) - parseDays(a.duration));
+            case 'name':
+                return sorted.sort((a, b) => a.title.localeCompare(b.title, i18n.resolvedLanguage));
+            case 'popularity':
+            default:
+                return sorted.sort((a, b) => (tourOrder.get(a.slug) ?? 0) - (tourOrder.get(b.slug) ?? 0));
+        }
+    }, [filteredPackages, sortBy, tourOrder, i18n.resolvedLanguage]);
+
+    const sortLabelKey = {
+        popularity: 'packages.sort_popularity',
+        'price-asc': 'packages.sort_price_low',
+        'price-desc': 'packages.sort_price_high',
+        'duration-asc': 'packages.sort_duration_short',
+        'duration-desc': 'packages.sort_duration_long',
+        name: 'packages.sort_name',
+    };
 
     const toggleLevel = (level) => {
         setSelectedLevels((prev) => (prev.includes(level) ? prev.filter((item) => item !== level) : [...prev, level]));
@@ -146,16 +191,29 @@ const Packages = () => {
                     <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
                         <span className="font-jakarta text-label-caps text-on-surface-variant">SHOWING {filteredPackages.length} EXPEDITIONS</span>
                         <div className="flex items-center gap-3">
-                            <span className="text-sm text-on-surface-variant">Sort by:</span>
-                            <button className="bg-surface-container-high px-4 py-2 rounded-lg flex items-center gap-2 border border-outline-variant">
-                                <span className="font-bold text-sm text-on-surface">Popularity</span>
-                                <span className="material-symbols-outlined text-sm">expand_more</span>
-                            </button>
+                            <span className="text-sm text-on-surface-variant">{t('packages.sort_by')}</span>
+                            <div className="relative">
+                                <select
+                                    value={sortBy}
+                                    onChange={(e) => setSortBy(e.target.value)}
+                                    className="appearance-none bg-surface-container-high pl-4 pr-10 py-2 rounded-lg border border-outline-variant font-bold text-sm text-on-surface cursor-pointer focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+                                    aria-label={t('packages.sort_by')}
+                                >
+                                    {SORT_OPTIONS.map((option) => (
+                                        <option key={option} value={option}>
+                                            {t(sortLabelKey[option])}
+                                        </option>
+                                    ))}
+                                </select>
+                                <span className="material-symbols-outlined text-sm text-on-surface-variant pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
+                                    expand_more
+                                </span>
+                            </div>
                         </div>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        {filteredPackages.map((pkg) => (
+                        {sortedPackages.map((pkg) => (
                             <div
                                 key={pkg.slug}
                                 className="group bg-surface-container-low rounded-3xl overflow-hidden border border-outline-variant/30 hover:border-primary/40 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20"
